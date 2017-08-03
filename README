@@ -7,19 +7,70 @@
 #+OPTIONS: html-preamble:t html-postamble:nil
 #+PROPERTY: header-args:R :session :results output :exports both :tangle yes :comments link
 
-#+TITLE:   README
 #+DATE:	   {{{time(%B %d\, %Y)}}}
 #+AUTHOR:  Marie-Helene Burle
 #+EMAIL:   msb2@sfu.ca
 
-* What is emacs?
+** What is emacs?
 
-* How can it be useful to me?
+emacs is a powerful extensible text editor.
 
-* Who is this workshop for?
+** How can it be useful to me?
 
-* When is this workshop happening?
+emacs is a fantastic tool to do anything that can be done with plain text: write/run code, literate programming, version control, planning, organizing, agenda, notes, write papers or a thesis, email...
 
-* Where?
+** Goal of this workshop
 
-* What do I need to do before coming?
+emacs, with its archaic keybindings and lisp language seems daunting to many. There are other tools out there who are easier to get started with and who perform many tasks well. Many aspects of emacs however, are hard to beat. Once you make it past the initial barrier, you get a glimpse of the world on the other side. From there on, things only get better and more exciting every day. I believe that it is really worthwhile to fight through the initial step.
+
+The goal of this workshop is *not* to go over any aspect of emacs in detail. The idea is to cover a lot of ground, knowing that you won't be able to master what is being covered in such a limited amount of time, but so that
+
+1. you get a feel for the potential of the tool
+2. you know how to get started and where to look for information to build up the knowledge yourself
+
+The reason for chosing this approach is that it takes too much time to get anyone comfortable enough with emacs' idiosyncrasies to ever reach an interesting point in the timeframe of a workshop. I cannot give a 15 workshop series on emacs and a workshop not going beyond technicalities such as keybindings do not give justice to emacs and has no chance to ever convince anyone that they should look deeper into it.
+
+We will thus cover a lot of ground, but it will be up to you to explore it in detail later. By the end of it, you will have a good idea of some of the potentiality of emacs as a tool and you will be better able to assess whether it is something you want to invest yourself in or not.
+
+** What we will cover
+
+- [[https://github.com/magit/magit][magit]] (a version control package for emacs)
+- [[https://github.com/emacs-ess/ESS][ESS]] (a package to run statistical analysis programs, including R, in emacs). We will work with R for the workshop.
+- org-babel ()
+
+** Who is this workshop for?
+
+This workshop is open to anyone. While you do not need any prior knowledge of emacs, it would be most useful if you had some level of familiarity with some coding and/or text tools. This will make it easier for you to follow along and see where you could benefit from using emacs. As examples, prior experience working with R or python, literate programming (e.g. RMarkdown) version control (e.g. git) or with coding languages.
+
+familiar with:
+- git
+- R
+- RMarkdown
+
+That said, anybody curious about emacs is welcome!
+
+** What do I need to do before coming?
+
+*Where:* Room 7010, Library Research Commons, SFU Burnaby Campus
+*When:*
+
+*** Software
+
+Make sure you have a working *and updated* emacs version.
+
+Main download page for Linux, Windows and macOS:
+
+https://www.gnu.org/software/emacs/download.html
+
+The 64 bit version for Windows can also be obtained from:
+
+- github https://github.com/zklhp/emacs-w64
+- sourceforge (this is a slightly different version—read http://emacsbinw64.sourceforge.net/ for more information) https://sourceforge.net/projects/emacsbinw64/
+
+*** Dependencies
+
+ESS and magit packages (see [[*What we will cover]["What we will cover"]]).
+
+*** Homework (what?!?)
+
+It would be most useful if you had a look at the documents of 2 previous emacs workshops I gave and even better still if you tried these things in your emacs installation to familiarize yourself with the software a little bit. Do not worry if something doesn't work as you hoped. Just explore the (ugly by default) emacs interface on your own a little bit. It will make things that much easier during the workshop.
