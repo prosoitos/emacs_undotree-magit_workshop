@@ -46,6 +46,7 @@ This is ambitious and if we can't cover all of it, I will be happy to give a fol
 This workshop is open to anyone. While you do not need any prior knowledge of emacs, it would be most useful if you had some level of familiarity with some of these tools ("tool" being used in a very broad sense here...):
 
 - git
+/It would be ideal if you could come with a dirty repository: this would allow, without losing any time setting up a new repository, to get a true feel for the magit interface and you could have a hands-on experience running a few basic commands (e.g. staging a file or hunks and committing/)
 - R
 - RMarkdown
 
