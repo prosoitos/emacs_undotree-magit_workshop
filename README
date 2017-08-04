@@ -43,13 +43,13 @@ This is ambitious and if we can't cover all of it, I will be happy to give a fol
 
 ** Who is this workshop for?
 
-This workshop is open to anyone. While you do not need any prior knowledge of emacs, it would be most useful if you had some level of familiarity with some of these tools (tool being used in a very broad sense here...):
+This workshop is open to anyone. While you do not need any prior knowledge of emacs, it would be most useful if you had some level of familiarity with some of these tools ("tool" being used in a very broad sense here...):
 
 - git
 - R
 - RMarkdown
 
-Not only will it make understanding of what we are doing easier, it will give you an opportunity to see how one can do some of the tasks you are familiar with in emacs, rather than in the tools you are currently using. Even if you end up not embracing emacs, it could broaden your perspective on some of these tasks and the tools you use.
+Not only will it make understanding of what we are doing easier, it will also give you an opportunity to see how one can do some of the tasks you are familiar with in emacs. Even if you end up not embracing emacs, it could broaden your perspective on some of these tasks and the tools you use.
 
 That said, anybody curious about emacs is welcome! You can always learn something new, even if you don't follow the whole thing!
 
@@ -88,13 +88,13 @@ You will need to install the *undo-tree*, *magit*, and *ESS* packages.
 
 ***** How do I install packages?
 
-****** Create an init file
+****** Create an init (initialization) file
 
-Create a file (=C-x C-f=, meaning "Control-x, then Control-f") called =.emacs= in your home directory (this is =C:\Users\username\AppData\Roaming= in recent versions of Windows). The init file is where all your emacs customizations will live.
+Create a file (type =C-x C-f=, meaning "control-x, then control-f". "f" stands for "find") called =.emacs= in your home directory (this is =C:\Users\username\AppData\Roaming= in recent versions of Windows). The init file is where all your emacs customizations will live.
 
 ****** Customize your init file
 
-- In the following code, replace =HOME= by your home directory (=~= if you are in a unix environment, =C:/Users/username/AppData/Roaming= if you are on Windows).
+- In the code below, replace =HOME= by your home directory (=~= if you are in a unix environment, =C:/Users/username/AppData/Roaming= if you are on Windows).
 
 - Paste the code in your =.emacs= file (it's ok if you have no idea what any of this means).
 
@@ -106,7 +106,7 @@ Create a file (=C-x C-f=, meaning "Control-x, then Control-f") called =.emacs= i
 (let ((default-directory  "HOME/.emacs.d/elpa/"))
   (setq load-path
         (append
-         (let ((load-path  (copy-sequence load-path))) ;; Shadow
+         (let ((load-path  (copy-sequence load-path)))
            (append
             (copy-sequence (normal-top-level-add-to-load-path '(".")))
             (normal-top-level-add-subdirs-to-load-path)))
@@ -120,9 +120,9 @@ Create a file (=C-x C-f=, meaning "Control-x, then Control-f") called =.emacs= i
 	     '("melpa" . "http://melpa.milkbox.net/packages/") t)
 #+END_SRC
 
-- save the file (=C-x C-s=, meaning "Control-x, then Control-s").
+- save the file (type =C-x C-s=, meaning "control-x, then control-s". "s" stands for "save").
 
-- *restart emacs* (this is necessary for the customizations to take effect).
+- *restart emacs*: this is necessary for the customizations to take effect (you can close emacs with =C-x C-c=. "c" stands for "close").
 
 ****** install the packages
 
@@ -132,16 +132,16 @@ Create a file (=C-x C-f=, meaning "Control-x, then Control-f") called =.emacs= i
 M-x list-packages
 #+END_EXAMPLE
 
-(=M-x= means "press the Alt or Meta key and x together". It is the way to give emacs a command. After pressing =M-x=, you will see it written in the minibuffer—the tiny window at the bottom of your emacs frame. =list-packages= is the command we want to execute)
+(=M-x= means "press the Alt (or Meta) key and x together". It is the way to give emacs a command. After pressing =M-x=, you will see it written in the minibuffer—the tiny window at the bottom of your emacs frame. =list-packages= is the command we want to execute).
 
-- look for the packages you want in the list (scrolling down could be tedious, but you can use =C-s= (Control and s—"s" stands for "search"). You will be prompted to enter a string in the minibuffer. Press =C-s= again until you get where you want (press =Return= then). You can search backward with =C-r=). /If you aren't all that impressed with this way of searching, don't worry: there are many fancy packages that make searching for strings or regex very convenient. This is just the default built-in option./
+- look for the packages you want in the list (scrolling down could be tedious, but you can use =C-s= ("control-s". "s" stands for "search"). You will be prompted to enter a string in the minibuffer. Press =C-s= again until you get where you want (press =Return= then). You can search backward with =C-r=). /If you aren't all that impressed with this way of searching, don't worry: there are many fancy packages that make searching for strings or regex very convenient. This is just the default built-in option./
 
-- mark the packages you want to install with =I= (for "install")
+- mark the packages you want to install with =I= (for "install").
 
-- press =x= (for "execute")
+- press =x= (for "execute").
 
-- make sure the packages installed in =HOME/.emacs.d/elpa/=. If not, move them there so that they are in the load path of emacs
+- make sure the packages installed in =HOME/.emacs.d/elpa/=. If not, move them there so that they are in emacs' load path.
 
-*If you run into issues at any point in this process, google is your friend: there is a horde of forums where you can find the answer to almost any question. Google your error message or keywords linked to what you are trying to do and you will most likely find the answer in a post of [[https://stackoverflow.com/][Stack Overflow]] or [[https://emacs.stackexchange.com/][Emacs Stack Exchange]], amongst others. Another good source is the [[https://www.emacswiki.org/][emacs Wiki]]*
+*If you run into issues at any point in this process, google is your friend: there is a horde of forums where you can find the answer to almost any question. Google your error message or keywords linked to what you are trying to do and you will most likely find the answer in a post of [[https://stackoverflow.com/][Stack Overflow]] or [[https://emacs.stackexchange.com/][Emacs Stack Exchange]], amongst others. Another good source is the [[https://www.emacswiki.org/][emacs Wiki]].*
 
-/Fighting to have something work will be part of your emacs life for some time, so you had better get used to it... that said, do not get turned off by the things that you might find awckward, ugly, or unpractical. You can customize absolutely *anything* in emacs. So you can turn it into your own: as beautiful and practical as you dream and more adapted to your needs than any other tool will ever be. This is maybe the main difference between emacs and the softwares you might be using to perform your usual tasks: many are friendly, practical, and easy to use out of the box (think for instance of RStudio). Emacs will not work nearly as well for you out of the box. But its potential is unlimited and any feature you dream of seeing, you can just make it. You are not limited by what others decided to implement, nor how they chose to customize the tool. The look, the feel, the key bindings, the automation, etc. are all up to you. In many ways, this is absolute freedom. But you have to fight a bit to enjoy it./
+/Fighting to have something work will be part of your emacs life for some time, so you'd better get used to it... that said, do not get turned off by the things that you might find awckward, ugly, or unpractical. You can customize absolutely *anything* in emacs. So you can turn it into your own: as beautiful and practical as you dream and more adapted to your needs than any other tool will ever be. This is maybe the main difference between emacs and the softwares you might be using to perform your usual tasks: many are friendly, practical, and easy to use out of the box (think for instance of RStudio). Emacs will not work nearly as well for you out of the box. But its potential is unlimited and any feature you dream of seeing, you can just make it. You are not limited by what others decided to implement, nor how they chose to customize the tool. The look, the feel, the key bindings, the automation, etc. are all up to you. In many ways, this is absolute freedom. But you have to fight a bit to enjoy it :)/
