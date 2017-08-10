@@ -36,13 +36,11 @@ We will thus move along rather fast and you might not be able to follow all of i
 
 - [[http://www.dr-qubit.org/undo-tree.html][undo-tree]]: a package allowing unlimited undo and redo without ever breaking the chain thanks to its tree (rather than linear) structure
 
-#+ATTR_HTML: :width 300px
-[[https://user-images.githubusercontent.com/4634851/29159043-173e6ebe-7d62-11e7-9dff-806cf38d1f33.png][undo-tree picture]]
+[[https://user-images.githubusercontent.com/4634851/29159043-173e6ebe-7d62-11e7-9dff-806cf38d1f33.png]]
 
 - [[https://github.com/magit/magit][magit]]: a package to run git in emacs
 
-#+ATTR_HTML: :width 300px
-[[https://user-images.githubusercontent.com/4634851/29159047-1ad89144-7d62-11e7-9c63-d1793339797b.png][magit picture]]
+[[https://user-images.githubusercontent.com/4634851/29159047-1ad89144-7d62-11e7-9c63-d1793339797b.png]]
 
 - [[http://ess.r-project.org/][ESS]]: a package to run statistical analysis programs, including R, in emacs
 
