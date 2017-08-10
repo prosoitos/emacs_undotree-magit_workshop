@@ -35,8 +35,15 @@ We will thus move along rather fast and you might not be able to follow all of i
 ** What we will try to cover
 
 - [[http://www.dr-qubit.org/undo-tree.html][undo-tree]]: a package allowing unlimited undo and redo without ever breaking the chain thanks to its tree (rather than linear) structure
+
+https://user-images.githubusercontent.com/4634851/29159043-173e6ebe-7d62-11e7-9dff-806cf38d1f33.png
+
 - [[https://github.com/magit/magit][magit]]: a package to run git in emacs
+
+https://user-images.githubusercontent.com/4634851/29159047-1ad89144-7d62-11e7-9c63-d1793339797b.png
+
 - [[http://ess.r-project.org/][ESS]]: a package to run statistical analysis programs, including R, in emacs
+
 - Babel: literate programming in org-mode (org-mode is part of emacs by default)
 
 This is ambitious and if we can't cover all of it, I will be happy to give a follow-up workshop at a later date.
