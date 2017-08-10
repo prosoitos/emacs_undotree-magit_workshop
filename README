@@ -40,7 +40,7 @@ We will thus move along rather fast and you might not be able to follow all of i
 
 - [[https://github.com/magit/magit][magit]]: a package to run git in emacs
 
-[[https://user-images.githubusercontent.com/4634851/29159043-173e6ebe-7d62-11e7-9dff-806cf38d1f33.png]]
+[[https://user-images.githubusercontent.com/4634851/29159047-1ad89144-7d62-11e7-9c63-d1793339797b.png]]
 
 - [[http://ess.r-project.org/][ESS]]: a package to run statistical analysis programs, including R, in emacs
 
