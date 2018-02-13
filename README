@@ -158,8 +158,8 @@ M-x list-packages
 
 /Fighting to have something work will be part of your emacs life for some time, so you'd better get used to it... that said, do not get turned off by the things that you might find awckward, ugly, or unpractical. You can customize absolutely *anything* in emacs. So you can turn it into your own: as beautiful and practical as you dream and more adapted to your needs than any other tool will ever be. This is maybe the main difference between emacs and the softwares you might be using to perform your usual tasks: many are friendly, practical, and easy to use out of the box (think for instance of RStudio). Emacs will not work nearly as well for you out of the box. But its potential is unlimited and any feature you dream of seeing, you can just make it. You are not limited by what others decided to implement, nor how they chose to customize the tool. The look, the feel, the key bindings, the automation, etc. are all up to you. In many ways, this is absolute freedom. But you have to fight a bit to enjoy it :)/
 
----
+--------------------------------------------------------
 
-Our worksheet for the day: https://prosoitos.github.io/workshop_getting-started-with-emacs/
+Our worksheet for today: https://prosoitos.github.io/workshop_getting-started-with-emacs/
 
----
+--------------------------------------------------------
