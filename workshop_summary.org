@@ -1,0 +1,39 @@
+#+OPTIONS: title:t date:t author:t email:t
+#+OPTIONS: toc:t h:6 num:nil |:t todo:nil
+#+OPTIONS: *:t -:t ::t <:t \n:t e:t creator:nil
+#+OPTIONS: f:t inline:t tasks:t tex:t timestamp:t
+#+OPTIONS: html-preamble:t html-postamble:nil
+
+#+TITLE:   Getting started with emacs
+#+DATE:	   {{{time(%B %d\, %Y)}}}
+#+AUTHOR:  Marie-Hélène Burle
+#+EMAIL:   msb2@sfu.ca
+
+
+* Emacs?
+
+Emacs is a powerful extensible and highly customizable text editor.
+
+* Prerequisites
+
+While you do not need any prior knowledge of emacs, this workshop will be most useful if you have some level of familiarity with some of these languages or system:
+
+- R
+- RMarkdown
+- git
+
+Not only will it help understanding what we are doing, it will also give you an opportunity to see how one can do some of the tasks you are familiar with differently. Even if you end up not embracing emacs, it could broaden your perspective on some of the tasks and tools of your workflow.
+
+That said, anybody curious about emacs is welcome! You can always learn something new, even if you don't follow everything on your machine.
+
+* Software and dependencies
+
+** Emacs
+
+Make sure you have [[https://www.gnu.org/software/emacs/download.html][a working *and updated* emacs version.]]
+
+** Packages
+
+You will need to install the [[http://www.dr-qubit.org/undo-tree.html][undo-tree]], [[https://github.com/magit/magit][magit]], and [[http://ess.r-project.org/][ESS]] packages.
+
+See the [[https://github.com/prosoitos/workshop_getting-started-with-emacs][README]] for information on how to install packages in emacs.
