@@ -12,11 +12,6 @@
 
 #+TODO: COMMENT |
 
-#+HTML: <div class="outline-2" id="meta">
-| *{{{author}}}*           |
-| {{{time(%B %d\, %Y)}}} |
-#+HTML: </div>
-
 Here is our tentative program for today:
 
 - make sure everybody managed to install a working version of emacs
