@@ -81,14 +81,12 @@ https://www.lib.sfu.ca/about/branches-depts/rc/services/workshops/32988
 
 Make sure you have a working *and updated* emacs version.
 
-Main download page for Linux, Windows and macOS:
-
-https://www.gnu.org/software/emacs/download.html
+[[https://www.gnu.org/software/emacs/download.html][Main download page for Linux, Windows and macOS]].
 
 The 64 bit version for Windows can also be obtained from:
 
-- github https://github.com/zklhp/emacs-w64
-- sourceforge (this is a slightly different version—read http://emacsbinw64.sourceforge.net/ for more information) https://sourceforge.net/projects/emacsbinw64/
+- [[https://github.com/zklhp/emacs-w64][GitHub]]
+- [[https://sourceforge.net/projects/emacsbinw64/][sourceforge]] (this is a [[http://emacsbinw64.sourceforge.net/][slightly different version]])
 
 **** Homework (what?!?)
 
@@ -150,7 +148,7 @@ M-x list-packages
 
 - mark the packages you want to install with =I= (for "install").
 
-- press ~x~ (for "execute").
+- press =x= (for "execute").
 
 - make sure the packages installed in =HOME/.emacs.d/elpa/=. If not, move them there so that they are in emacs' load path.
 
