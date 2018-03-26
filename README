@@ -150,16 +150,10 @@ M-x list-packages
 
 - mark the packages you want to install with =I= (for "install").
 
-- press =x= (for "execute").
+- press ~x~ (for "execute").
 
 - make sure the packages installed in =HOME/.emacs.d/elpa/=. If not, move them there so that they are in emacs' load path.
 
 *If you run into issues at any point in this process, google is your friend: there is a horde of forums where you can find the answer to almost any question. Google your error message or keywords linked to what you are trying to do and you will most likely find the answer in a post of [[https://stackoverflow.com/][Stack Overflow]] or [[https://emacs.stackexchange.com/][Emacs Stack Exchange]], amongst others. Another good source is the [[https://www.emacswiki.org/][emacs Wiki]].*
 
 /Fighting to have something work will be part of your emacs life for some time, so you'd better get used to it... that said, do not get turned off by the things that you might find awckward, ugly, or unpractical. You can customize absolutely *anything* in emacs. So you can turn it into your own: as beautiful and practical as you dream and more adapted to your needs than any other tool will ever be. This is maybe the main difference between emacs and the softwares you might be using to perform your usual tasks: many are friendly, practical, and easy to use out of the box (think for instance of RStudio). Emacs will not work nearly as well for you out of the box. But its potential is unlimited and any feature you dream of seeing, you can just make it. You are not limited by what others decided to implement, nor how they chose to customize the tool. The look, the feel, the key bindings, the automation, etc. are all up to you. In many ways, this is absolute freedom. But you have to fight a bit to enjoy it :)/
-
---------------------------------------------------------
-
-Our worksheet for today: https://prosoitos.github.io/workshop_getting-started-with-emacs/
-
---------------------------------------------------------
