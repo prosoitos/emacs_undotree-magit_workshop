@@ -1,0 +1,815 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2018-04-01 Sun 18:03 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Marie-Helene Burle" />
+<style type="text/css">
+<!--/*--><![CDATA[/*><!--*/
+@media all
+{
+/* @import url(http://fonts.googleapis.com/css?family=Inconsolata); */
+/* @import url(http://fonts.googleapis.com/css?family=Open Sans Condensed Light); */
+/* @import url(http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700); */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+[hidden] {
+  display: none;
+}
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 95%;
+  -ms-text-size-adjust: 95%;
+}
+body {
+  margin: 0;
+}
+a:focus {
+  outline: thin dotted;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: bold;
+}
+dfn {
+  font-style: italic;
+}
+mark {
+  background: #ff0;
+  color: #000;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+pre,
+code {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+img {
+  border: 0;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+figure {
+  margin: 0;
+}
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+legend {
+  border: 0;
+  padding: 0;
+}
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+}
+button,
+input {
+  line-height: normal;
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+html {
+  font-family: 'Lato', sans-serif;
+  font-size: 110%;
+}
+pre,
+code {
+  font-family: 'Inconsolata', sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+}
+h1 {
+  line-height: 45px;
+}
+h2 {
+  line-height: 35px;
+}
+h3 {
+  line-height: 32px;
+}
+h4 {
+  line-height: 30px;
+}
+h5 {
+  line-height: 28px;
+}
+h6 {
+  line-height: 26px;
+}
+html {
+  background-color: #faf9f1;
+  color: #242b2f;
+  margin: 1em;
+  line-height: 24px;
+}
+body {
+  background-color: #faf9f1;
+  margin: 0px auto 0px 150px;
+  max-width: 21.5cm;
+  /* border: 1pt solid #93a1a1; */
+  /* border: 1pt solid #d9d9d9; */
+  /* border: 1pt solid #c9cfcf; */
+  /* border-radius: 10px; */
+  padding: 1em;
+}
+/* code { */
+/*   background-color: #eee8d5; */
+/*   padding: 2px; */
+/* } */
+a {
+  color: #b58900;
+}
+a:visited {
+  color: #cb4b16;
+}
+a:hover {
+  color: #e65719;
+}
+h1 {
+  color: #890c0c;
+}
+h2 {
+  color: #094043;
+}
+h3 {
+  color: #0f6b70;
+}
+h4 {
+  color: #13866c;
+}
+h5 {
+  color: #528d25;
+}
+h6 {
+  color: #9d9d15;
+}
+pre {
+  background-color: #f1f1f1;
+  color: #262626;
+  padding: 0.8em;
+  font-family: 'Inconsolata';
+  font-size: 95%;
+  line-height: 22px;
+  /* border: 1pt solid #d9d9d9; */
+  border: 0.5pt solid #d9d9d9;
+  border-radius: 5px;
+  box-shadow: 0pt 0pt 0pt #eee8d5;
+  /* letter-spacing: 1.1px; */
+}
+code {
+  background-color: #f1f1f1;
+  color: #262626;
+  padding: 0.1em;
+  font-family: 'Inconsolata';
+  font-size: 95%;
+  line-height: 22px;
+  border: 0.5pt solid #e6e6e6;
+  /* border-radius: 5px; */
+  box-shadow: 0pt 0pt 0pt #eee8d5;
+  /* letter-spacing: 1.1px; */
+}
+.org-ess-numbers {
+    color: #e28200;
+}
+.org-comment-delimiter {
+    color: #8c8c8c;
+}
+.org-comment {
+    color: #8c8c8c;
+}
+.org-string {
+    color: #013b6d;
+}
+.org-ess-function-call {
+    color: #bf4040;
+    /* font-weight: bolder; */
+}
+.org-ess-operator {
+    color: #0b5e56;
+}
+.org-ess-assignment {
+    color: #0b5e56;
+}
+.org-ess-paren {
+    color: #0b5e56;
+}
+.org-ess-XopX {
+    color: #0b5e56;
+}
+/* pre, */
+/* code { */
+/*   background-color: #faf9f1; */
+/* } */
+h1 {
+  font-size: 2.2em;
+  text-align: center;
+}
+h2 {
+  font-size: 1.6em;
+}
+h3 {
+  font-size: 1.5em;
+}
+h4 {
+  font-size: 1.4em;
+}
+h5 {
+  font-size: 1.3em;
+}
+h6 {
+  font-size: 1.2em;
+}
+.tag {
+  background-color: #eee8d5;
+  color: #d33682;
+  padding: 0 0.2em;
+}
+.todo,
+.next,
+.done {
+  color: #faf9f1;
+  background-color: #dc322f;
+  padding: 0 0.2em;
+}
+.tag {
+  -webkit-border-radius: 0.35em;
+  -moz-border-radius: 0.35em;
+  border-radius: 0.35em;
+}
+.TODO {
+  -webkit-border-radius: 0.2em;
+  -moz-border-radius: 0.2em;
+  border-radius: 0.2em;
+  background-color: #2aa198;
+}
+.NEXT {
+  -webkit-border-radius: 0.2em;
+  -moz-border-radius: 0.2em;
+  border-radius: 0.2em;
+  background-color: #268bd2;
+}
+.ACTIVE {
+  -webkit-border-radius: 0.2em;
+  -moz-border-radius: 0.2em;
+  border-radius: 0.2em;
+  background-color: #268bd2;
+}
+.DONE {
+  -webkit-border-radius: 0.2em;
+  -moz-border-radius: 0.2em;
+  border-radius: 0.2em;
+  background-color: #859900;
+}
+.WAITING {
+  -webkit-border-radius: 0.2em;
+  -moz-border-radius: 0.2em;
+  border-radius: 0.2em;
+  background-color: #cb4b16;
+}
+.HOLD {
+  -webkit-border-radius: 0.2em;
+  -moz-border-radius: 0.2em;
+  border-radius: 0.2em;
+  background-color: #d33682;
+}
+.NOTE {
+  -webkit-border-radius: 0.2em;
+  -moz-border-radius: 0.2em;
+  border-radius: 0.2em;
+  background-color: #d33682;
+}
+.CANCELLED {
+  -webkit-border-radius: 0.2em;
+  -moz-border-radius: 0.2em;
+  border-radius: 0.2em;
+  background-color: #859900;
+}
+
+ /* TOC inspired by http://jashkenas.github.com/coffee-script */
+  #table-of-contents {
+    font-size: 10pt;
+    position: fixed;
+    right: 0em;
+    top: 0em;
+    background: #faf9f1;
+    color: #666666;
+    /* -webkit-box-shadow: 0 0 1em #777777; */
+    /* -moz-box-shadow: 0 0 1em #777777; */
+    -webkit-border-bottom-left-radius: 10px;
+    -moz-border-radius-bottomleft: 10px;
+    text-align: right;
+    /* ensure doesn't flow off the screen when expanded */
+    max-height: 80%;
+    overflow: auto; }
+    #table-of-contents h2 {
+      font-size: 12pt;
+      max-width: 25em;
+      font-weight: bold;
+      color: #666666;
+      padding-right: 3em;
+      padding-left: 0.8em;
+      padding-top: 1em;
+      padding-bottom: 0em;
+      text-align: left;}
+    #table-of-contents #text-table-of-contents {
+      display: none;
+      text-align: left; }
+    #table-of-contents:hover #text-table-of-contents {
+      display: block;
+      padding: 0.5em;
+      margin-top: -1.5em; }
+
+  .rss_box {}
+  .rss_title, rss_title a {}
+  .rss_items {}
+  .rss_item a:link, .rss_item a:visited, .rss_item a:active {}
+  .rss_item a:hover {}
+  .rss_date {}
+
+} /* END OF @media all */
+
+
+@media screen
+{
+  #table-of-contents {
+    float: right;
+    border: 0px solid #CCC;
+    max-width: 25%;
+    overflow: auto;
+  }
+} /* END OF @media screen */
+/*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2018 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="preamble" class="status">
+<p style="color:#666666"><b>Marie-Helene Burle</b><br>April 01, 2018</span>
+</div>
+<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgdbd5d6b">What is emacs?</a></li>
+<li><a href="#org2573997">How can it be useful to me?</a></li>
+<li><a href="#org3fe04e2">Goal of this workshop</a></li>
+<li><a href="#org493161c">What we will try to cover</a></li>
+<li><a href="#org1315fa0">Who is this workshop for?</a></li>
+<li><a href="#org2efbf2a">Practical matters</a>
+<ul>
+<li><a href="#org78cae5d">Where and when?</a></li>
+<li><a href="#orgf722e1f">Registration</a></li>
+<li><a href="#org4f78b36">What do I need to do before coming?</a>
+<ul>
+<li><a href="#orgf4cb6fb">Software</a></li>
+<li><a href="#orgadc216e">Homework (what?!?)</a></li>
+<li><a href="#org7adfa04">Packages</a>
+<ul>
+<li><a href="#orgcc5750c">How do I install packages?</a>
+<ul>
+<li><a href="#orgb10b898">Create an init (initialization) file</a></li>
+<li><a href="#org40e5268">Customize your init file</a></li>
+<li><a href="#org7d9d305">install the packages</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgdbd5d6b" class="outline-2">
+<h2 id="orgdbd5d6b">What is emacs?</h2>
+<div class="outline-text-2" id="text-orgdbd5d6b">
+<p>
+emacs is a powerful extensible and highly customizable text editor.<br />
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2573997" class="outline-2">
+<h2 id="org2573997">How can it be useful to me?</h2>
+<div class="outline-text-2" id="text-org2573997">
+<p>
+emacs is a fantastic tool to do anything that can be done with plain text: write/run code, literate programming, version control, LaTeX/html/etc. writing, planning, organizing, agenda, notes, papers and thesis writing, emails&#x2026;<br />
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3fe04e2" class="outline-2">
+<h2 id="org3fe04e2">Goal of this workshop</h2>
+<div class="outline-text-2" id="text-org3fe04e2">
+<p>
+emacs, with its archaic keybindings and its use of the lisp language seems daunting to many. There are other tools out there who are easier to get started with and who perform many tasks well. Many aspects of emacs however, are hard to beat. Once you make it past the initial barrier, you get a glimpse of the world on the other side. From there on, things only get better and more exciting every day. I believe that it is really worthwhile to fight through the initial steps.<br />
+</p>
+
+<p>
+The goal of this workshop is <b>not</b> to go over any aspect of emacs in detail. The idea is to cover a lot of ground, knowing that you won't be able to master what is being covered in such a limited amount of time. Rather, the idea is to:<br />
+</p>
+
+<ol class="org-ol">
+<li>give you a feel for the potential of the tool<br /></li>
+<li>get you started in your emacs journey so that you can more easy look for information and build up the knowledge yourself<br /></li>
+</ol>
+
+<p>
+The reason for chosing this approach is that it takes too much time to get anyone comfortable enough with emacs' idiosyncrasies to ever reach an interesting point in the timeframe of a workshop. I unfortunately cannot give a 15 workshop series on emacs. And a workshop which does not go past technicalities such as the keybindings does not give emacs justice and has very little chance to ever convince anyone that they should look deeper into it.<br />
+</p>
+
+<p>
+We will thus move along rather fast and you might not be able to follow all of it on your computer. But that's ok: you will do what you can, listen to the rest and by the end, you will be better able to assess whether it is something you want to invest yourself in or not. And if you got the bug, you will find all the information you need to learn emacs in details online.<br />
+</p>
+</div>
+</div>
+
+<div id="outline-container-org493161c" class="outline-2">
+<h2 id="org493161c">What we will try to cover</h2>
+<div class="outline-text-2" id="text-org493161c">
+<ul class="org-ul">
+<li><a href="http://www.dr-qubit.org/undo-tree.html">undo-tree</a>: a package allowing unlimited undo and redo without ever breaking the chain thanks to its tree (rather than linear) structure<br /></li>
+</ul>
+
+
+<div class="figure">
+<p><img src="https://user-images.githubusercontent.com/4634851/29159043-173e6ebe-7d62-11e7-9dff-806cf38d1f33.png" alt="29159043-173e6ebe-7d62-11e7-9dff-806cf38d1f33.png" /><br />
+</p>
+</div>
+
+<ul class="org-ul">
+<li><a href="https://github.com/magit/magit">magit</a>: a package to run git in emacs<br /></li>
+</ul>
+
+
+<div class="figure">
+<p><img src="https://user-images.githubusercontent.com/4634851/29159047-1ad89144-7d62-11e7-9c63-d1793339797b.png" alt="29159047-1ad89144-7d62-11e7-9c63-d1793339797b.png" /><br />
+</p>
+</div>
+
+<ul class="org-ul">
+<li><a href="http://ess.r-project.org/">ESS</a>: a package to run statistical analysis programs, including R, in emacs<br /></li>
+
+<li>Babel: literate programming in org-mode (org-mode is part of emacs by default)<br /></li>
+</ul>
+
+<p>
+This is ambitious and if we can't cover all of it, I will be happy to give a follow-up workshop at a later date.<br />
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1315fa0" class="outline-2">
+<h2 id="org1315fa0">Who is this workshop for?</h2>
+<div class="outline-text-2" id="text-org1315fa0">
+<p>
+This workshop is open to anyone. While you do not need any prior knowledge of emacs, it would be most useful if you had some level of familiarity with some of these tools ("tool" being used in a very broad sense here&#x2026;):<br />
+</p>
+
+<ul class="org-ul">
+<li>git<br /></li>
+</ul>
+<p>
+<i>It would be ideal if you could come with a dirty repository: this would allow, without losing any time setting up a new repository, to get a true feel for the magit interface and you could have a hands-on experience running a few basic commands (e.g. staging a file or hunks and committing</i>)<br />
+</p>
+<ul class="org-ul">
+<li>R<br /></li>
+<li>RMarkdown<br /></li>
+</ul>
+
+<p>
+Not only will it make understanding of what we are doing easier, it will also give you an opportunity to see how one can do some of the tasks you are familiar with in emacs. Even if you end up not embracing emacs, it could broaden your perspective on some of these tasks and the tools you use.<br />
+</p>
+
+<p>
+That said, anybody curious about emacs is welcome! You can always learn something new, even if you don't follow the whole thing!<br />
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2efbf2a" class="outline-2">
+<h2 id="org2efbf2a">Practical matters</h2>
+<div class="outline-text-2" id="text-org2efbf2a">
+</div>
+<div id="outline-container-org78cae5d" class="outline-3">
+<h3 id="org78cae5d">Where and when?</h3>
+<div class="outline-text-3" id="text-org78cae5d">
+<p>
+<b>Place:</b> Room 7010, Library Research Commons, SFU Burnaby Campus<br />
+</p>
+
+<p>
+<b>Date:</b> October 24, 2017<br />
+</p>
+
+<p>
+<b>Time:</b> 3–4:30 pm<br />
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf722e1f" class="outline-3">
+<h3 id="orgf722e1f">Registration</h3>
+<div class="outline-text-3" id="text-orgf722e1f">
+<p>
+<a href="https://www.lib.sfu.ca/about/branches-depts/rc/services/workshops/32988">https://www.lib.sfu.ca/about/branches-depts/rc/services/workshops/32988</a><br />
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4f78b36" class="outline-3">
+<h3 id="org4f78b36">What do I need to do before coming?</h3>
+<div class="outline-text-3" id="text-org4f78b36">
+</div>
+<div id="outline-container-orgf4cb6fb" class="outline-4">
+<h4 id="orgf4cb6fb">Software</h4>
+<div class="outline-text-4" id="text-orgf4cb6fb">
+<p>
+Make sure you have a working <b>and updated</b> emacs version.<br />
+</p>
+
+<p>
+<a href="https://www.gnu.org/software/emacs/download.html">Main download page for Linux, Windows and macOS</a>.<br />
+</p>
+
+<p>
+The 64 bit version for Windows can also be obtained from:<br />
+</p>
+
+<ul class="org-ul">
+<li><a href="https://github.com/zklhp/emacs-w64">GitHub</a><br /></li>
+<li><a href="https://sourceforge.net/projects/emacsbinw64/">sourceforge</a> (this is a <a href="http://emacsbinw64.sourceforge.net/">slightly different version</a>)<br /></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgadc216e" class="outline-4">
+<h4 id="orgadc216e">Homework (what?!?)</h4>
+<div class="outline-text-4" id="text-orgadc216e">
+<p>
+It would be most useful if you had a look at previous workshops I gave on <a href="https://prosoitos.github.io/workshop_intro-to-emacs/">emacs</a> and <a href="https://prosoitos.github.io/workshop_intro-to-org-mode/">org-mode</a>, even better still if you tried these things in your emacs installation to familiarize yourself with the software. Do not worry if something doesn't work as you hoped. Just explore the (ugly by default) emacs interface on your own a little. It will make things that much easier during the workshop and to follow the steps below.<br />
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7adfa04" class="outline-4">
+<h4 id="org7adfa04">Packages</h4>
+<div class="outline-text-4" id="text-org7adfa04">
+<p>
+You will need to install the <b>undo-tree</b>, <b>magit</b>, and <b>ESS</b> packages.<br />
+</p>
+</div>
+
+<div id="outline-container-orgcc5750c" class="outline-5">
+<h5 id="orgcc5750c">How do I install packages?</h5>
+<div class="outline-text-5" id="text-orgcc5750c">
+</div>
+<div id="outline-container-orgb10b898" class="outline-6">
+<h6 id="orgb10b898">Create an init (initialization) file</h6>
+<div class="outline-text-6" id="text-orgb10b898">
+<p>
+Create a file (type <code>C-x C-f</code>, meaning "control-x, then control-f". "f" stands for "find") called <code>.emacs</code> in your home directory (this is <code>C:\Users\username\AppData\Roaming</code> in recent versions of Windows). The init file is where all your emacs customizations will live.<br />
+</p>
+</div>
+</div>
+
+<div id="outline-container-org40e5268" class="outline-6">
+<h6 id="org40e5268">Customize your init file</h6>
+<div class="outline-text-6" id="text-org40e5268">
+<ul class="org-ul">
+<li>In the code below, replace <code>HOME</code> by your home directory (<code>~</code> if you are in a unix environment, <code>C:/Users/username/AppData/Roaming</code> if you are on Windows).<br /></li>
+
+<li>Paste the code in your <code>.emacs</code> file (it's ok if you have no idea what any of this means).<br /></li>
+</ul>
+
+<p>
+<i>Note: this code is written in <a href="https://en.wikipedia.org/wiki/Emacs_Lisp">"emacs-lisp"</a></i><br />
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><span class="org-comment-delimiter">;; </span><span class="org-comment">add the package installation directory in the load path</span>
+
+<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-keyword">let</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-rainbow-delimiters-depth-3">(</span>default-directory  <span class="org-string">"HOME/.emacs.d/elpa/"</span><span class="org-rainbow-delimiters-depth-3">)</span><span class="org-rainbow-delimiters-depth-2">)</span>
+  <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-keyword">setq</span> load-path
+        <span class="org-rainbow-delimiters-depth-3">(</span>append
+         <span class="org-rainbow-delimiters-depth-4">(</span><span class="org-keyword">let</span> <span class="org-rainbow-delimiters-depth-5">(</span><span class="org-rainbow-delimiters-depth-6">(</span>load-path  <span class="org-rainbow-delimiters-depth-7">(</span>copy-sequence load-path<span class="org-rainbow-delimiters-depth-7">)</span><span class="org-rainbow-delimiters-depth-6">)</span><span class="org-rainbow-delimiters-depth-5">)</span>
+           <span class="org-rainbow-delimiters-depth-5">(</span>append
+            <span class="org-rainbow-delimiters-depth-6">(</span>copy-sequence <span class="org-rainbow-delimiters-depth-7">(</span>normal-top-level-add-to-load-path '<span class="org-rainbow-delimiters-depth-8">(</span><span class="org-string">"."</span><span class="org-rainbow-delimiters-depth-8">)</span><span class="org-rainbow-delimiters-depth-7">)</span><span class="org-rainbow-delimiters-depth-6">)</span>
+            <span class="org-rainbow-delimiters-depth-6">(</span>normal-top-level-add-subdirs-to-load-path<span class="org-rainbow-delimiters-depth-6">)</span><span class="org-rainbow-delimiters-depth-5">)</span><span class="org-rainbow-delimiters-depth-4">)</span>
+         load-path<span class="org-rainbow-delimiters-depth-3">)</span><span class="org-rainbow-delimiters-depth-2">)</span><span class="org-rainbow-delimiters-depth-1">)</span>
+
+
+<span class="org-comment-delimiter">;; </span><span class="org-comment">add Melpa to the package listing</span>
+
+<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-keyword">require</span> '<span class="org-constant">package</span><span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="org-rainbow-delimiters-depth-1">(</span>add-to-list 'package-archives
+             '<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"melpa"</span> . <span class="org-string">"http://melpa.milkbox.net/packages/"</span><span class="org-rainbow-delimiters-depth-2">)</span> t<span class="org-rainbow-delimiters-depth-1">)</span>
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>save the file (type <code>C-x C-s</code>, meaning "control-x, then control-s". "s" stands for "save").<br /></li>
+
+<li><b>restart emacs</b>: this is necessary for the customizations to take effect (you can close emacs with <code>C-x C-c</code>. "c" stands for "close").<br /></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org7d9d305" class="outline-6">
+<h6 id="org7d9d305">install the packages</h6>
+<div class="outline-text-6" id="text-org7d9d305">
+<ul class="org-ul">
+<li>type:<br /></li>
+</ul>
+
+<pre class="example">
+M-x list-packages
+</pre>
+
+<p>
+(<code>M-x</code> means "press the Alt (or Meta) key and x together". It is the way to give emacs a command. After pressing <code>M-x</code>, you will see it written in the minibuffer—the tiny window at the bottom of your emacs frame. <code>list-packages</code> is the command we want to execute).<br />
+</p>
+
+<ul class="org-ul">
+<li>look for the packages you want in the list (scrolling down could be tedious, but you can use <code>C-s</code> ("control-s". "s" stands for "search"). You will be prompted to enter a string in the minibuffer. Press <code>C-s</code> again until you get where you want (press <code>Return</code> then). You can search backward with <code>C-r</code>). <i>If you aren't all that impressed with this way of searching, don't worry: there are many fancy packages that make searching for strings or regex very convenient. This is just the default built-in option.</i><br /></li>
+
+<li>mark the packages you want to install with <code>I</code> (for "install").<br /></li>
+
+<li>press <code>x</code> (for "execute").<br /></li>
+
+<li>make sure the packages installed in <code>HOME/.emacs.d/elpa/</code>. If not, move them there so that they are in emacs' load path.<br /></li>
+</ul>
+
+<p>
+<b>If you run into issues at any point in this process, google is your friend: there is a horde of forums where you can find the answer to almost any question. Google your error message or keywords linked to what you are trying to do and you will most likely find the answer in a post of <a href="https://stackoverflow.com/">Stack Overflow</a> or <a href="https://emacs.stackexchange.com/">Emacs Stack Exchange</a>, amongst others. Another good source is the <a href="https://www.emacswiki.org/">emacs Wiki</a>.</b><br />
+</p>
+
+<p>
+<i>Fighting to have something work will be part of your emacs life for some time, so you'd better get used to it&#x2026; that said, do not get turned off by the things that you might find awckward, ugly, or unpractical. You can customize absolutely <b>anything</b> in emacs. So you can turn it into your own: as beautiful and practical as you dream and more adapted to your needs than any other tool will ever be. This is maybe the main difference between emacs and the softwares you might be using to perform your usual tasks: many are friendly, practical, and easy to use out of the box (think for instance of RStudio). Emacs will not work nearly as well for you out of the box. But its potential is unlimited and any feature you dream of seeing, you can just make it. You are not limited by what others decided to implement, nor how they chose to customize the tool. The look, the feel, the key bindings, the automation, etc. are all up to you. In many ways, this is absolute freedom. But you have to fight a bit to enjoy it :)</i><br />
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
