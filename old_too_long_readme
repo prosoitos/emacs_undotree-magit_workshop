@@ -1,0 +1,159 @@
+#    -*- mode: org -*-
+
+#+OPTIONS: title:t date:t author:t email:t
+#+OPTIONS: toc:t h:6 num:nil |:t todo:nil
+#+OPTIONS: *:t -:t ::t <:t \n:t e:t creator:nil
+#+OPTIONS: f:t inline:t tasks:t tex:t timestamp:t
+#+OPTIONS: html-preamble:t html-postamble:nil
+#+PROPERTY: header-args:R :session :results output :exports both :tangle yes :comments link
+
+#+DATE:	   {{{time(%B %d\, %Y)}}}
+#+AUTHOR:  Marie-Helene Burle
+#+EMAIL:   msb2@sfu.ca
+
+** What is emacs?
+
+emacs is a powerful extensible and highly customizable text editor.
+
+** How can it be useful to me?
+
+emacs is a fantastic tool to do anything that can be done with plain text: write/run code, literate programming, version control, LaTeX/html/etc. writing, planning, organizing, agenda, notes, papers and thesis writing, emails...
+
+** Goal of this workshop
+
+emacs, with its archaic keybindings and its use of the lisp language seems daunting to many. There are other tools out there who are easier to get started with and who perform many tasks well. Many aspects of emacs however, are hard to beat. Once you make it past the initial barrier, you get a glimpse of the world on the other side. From there on, things only get better and more exciting every day. I believe that it is really worthwhile to fight through the initial steps.
+
+The goal of this workshop is *not* to go over any aspect of emacs in detail. The idea is to cover a lot of ground, knowing that you won't be able to master what is being covered in such a limited amount of time. Rather, the idea is to:
+
+1. give you a feel for the potential of the tool
+2. get you started in your emacs journey so that you can more easy look for information and build up the knowledge yourself
+
+The reason for chosing this approach is that it takes too much time to get anyone comfortable enough with emacs' idiosyncrasies to ever reach an interesting point in the timeframe of a workshop. I unfortunately cannot give a 15 workshop series on emacs. And a workshop which does not go past technicalities such as the keybindings does not give emacs justice and has very little chance to ever convince anyone that they should look deeper into it.
+
+We will thus move along rather fast and you might not be able to follow all of it on your computer. But that's ok: you will do what you can, listen to the rest and by the end, you will be better able to assess whether it is something you want to invest yourself in or not. And if you got the bug, you will find all the information you need to learn emacs in details online.
+
+** What we will try to cover
+
+- [[http://www.dr-qubit.org/undo-tree.html][undo-tree]]: a package allowing unlimited undo and redo without ever breaking the chain thanks to its tree (rather than linear) structure
+
+[[https://user-images.githubusercontent.com/4634851/29159043-173e6ebe-7d62-11e7-9dff-806cf38d1f33.png]]
+
+- [[https://github.com/magit/magit][magit]]: a package to run git in emacs
+
+[[https://user-images.githubusercontent.com/4634851/29159047-1ad89144-7d62-11e7-9c63-d1793339797b.png]]
+
+- [[http://ess.r-project.org/][ESS]]: a package to run statistical analysis programs, including R, in emacs
+
+- Babel: literate programming in org-mode (org-mode is part of emacs by default)
+
+This is ambitious and if we can't cover all of it, I will be happy to give a follow-up workshop at a later date.
+
+** Who is this workshop for?
+
+This workshop is open to anyone. While you do not need any prior knowledge of emacs, it would be most useful if you had some level of familiarity with some of these tools ("tool" being used in a very broad sense here...):
+
+- git
+/It would be ideal if you could come with a dirty repository: this would allow, without losing any time setting up a new repository, to get a true feel for the magit interface and you could have a hands-on experience running a few basic commands (e.g. staging a file or hunks and committing/)
+- R
+- RMarkdown
+
+Not only will it make understanding of what we are doing easier, it will also give you an opportunity to see how one can do some of the tasks you are familiar with in emacs. Even if you end up not embracing emacs, it could broaden your perspective on some of these tasks and the tools you use.
+
+That said, anybody curious about emacs is welcome! You can always learn something new, even if you don't follow the whole thing!
+
+** Practical matters
+
+*** Where and when?
+
+*Place:* Room 7010, Library Research Commons, SFU Burnaby Campus
+
+*Date:* October 24, 2017
+
+*Time:* 3–4:30 pm
+
+*** Registration
+
+TBA
+
+*** What do I need to do before coming?
+
+**** Software
+
+Make sure you have a working *and updated* emacs version.
+
+Main download page for Linux, Windows and macOS:
+
+https://www.gnu.org/software/emacs/download.html
+
+The 64 bit version for Windows can also be obtained from:
+
+- github https://github.com/zklhp/emacs-w64
+- sourceforge (this is a slightly different version—read http://emacsbinw64.sourceforge.net/ for more information) https://sourceforge.net/projects/emacsbinw64/
+
+**** Homework (what?!?)
+
+It would be most useful if you had a look at previous workshops I gave on [[https://prosoitos.github.io/workshop_intro-to-emacs/][emacs]] and [[https://prosoitos.github.io/workshop_intro-to-org-mode/][org-mode]], even better still if you tried these things in your emacs installation to familiarize yourself with the software. Do not worry if something doesn't work as you hoped. Just explore the (ugly by default) emacs interface on your own a little. It will make things that much easier during the workshop and to follow the steps below.
+
+**** Packages
+
+You will need to install the *undo-tree*, *magit*, and *ESS* packages.
+
+***** How do I install packages?
+
+****** Create an init (initialization) file
+
+Create a file (type =C-x C-f=, meaning "control-x, then control-f". "f" stands for "find") called =.emacs= in your home directory (this is =C:\Users\username\AppData\Roaming= in recent versions of Windows). The init file is where all your emacs customizations will live.
+
+****** Customize your init file
+
+- In the code below, replace =HOME= by your home directory (=~= if you are in a unix environment, =C:/Users/username/AppData/Roaming= if you are on Windows).
+
+- Paste the code in your =.emacs= file (it's ok if you have no idea what any of this means).
+
+/Note: this code is written in [[https://en.wikipedia.org/wiki/Emacs_Lisp]["emacs-lisp"]]/
+
+#+BEGIN_SRC emacs-lisp
+;; add the package installation directory in the load path
+
+(let ((default-directory  "HOME/.emacs.d/elpa/"))
+  (setq load-path
+        (append
+         (let ((load-path  (copy-sequence load-path)))
+           (append
+            (copy-sequence (normal-top-level-add-to-load-path '(".")))
+            (normal-top-level-add-subdirs-to-load-path)))
+         load-path)))
+
+
+;; add Melpa to the package listing
+
+(require 'package)
+(add-to-list 'package-archives
+	     '("melpa" . "http://melpa.milkbox.net/packages/") t)
+#+END_SRC
+
+- save the file (type =C-x C-s=, meaning "control-x, then control-s". "s" stands for "save").
+
+- *restart emacs*: this is necessary for the customizations to take effect (you can close emacs with =C-x C-c=. "c" stands for "close").
+
+****** install the packages
+
+- type:
+
+#+BEGIN_EXAMPLE
+M-x list-packages
+#+END_EXAMPLE
+
+(=M-x= means "press the Alt (or Meta) key and x together". It is the way to give emacs a command. After pressing =M-x=, you will see it written in the minibuffer—the tiny window at the bottom of your emacs frame. =list-packages= is the command we want to execute).
+
+- look for the packages you want in the list (scrolling down could be tedious, but you can use =C-s= ("control-s". "s" stands for "search"). You will be prompted to enter a string in the minibuffer. Press =C-s= again until you get where you want (press =Return= then). You can search backward with =C-r=). /If you aren't all that impressed with this way of searching, don't worry: there are many fancy packages that make searching for strings or regex very convenient. This is just the default built-in option./
+
+- mark the packages you want to install with =I= (for "install").
+
+- press =x= (for "execute").
+
+- make sure the packages installed in =HOME/.emacs.d/elpa/=. If not, move them there so that they are in emacs' load path.
+
+*If you run into issues at any point in this process, google is your friend: there is a horde of forums where you can find the answer to almost any question. Google your error message or keywords linked to what you are trying to do and you will most likely find the answer in a post of [[https://stackoverflow.com/][Stack Overflow]] or [[https://emacs.stackexchange.com/][Emacs Stack Exchange]], amongst others. Another good source is the [[https://www.emacswiki.org/][emacs Wiki]].*
+
+/Fighting to have something work will be part of your emacs life for some time, so you'd better get used to it... that said, do not get turned off by the things that you might find awckward, ugly, or unpractical. You can customize absolutely *anything* in emacs. So you can turn it into your own: as beautiful and practical as you dream and more adapted to your needs than any other tool will ever be. This is maybe the main difference between emacs and the softwares you might be using to perform your usual tasks: many are friendly, practical, and easy to use out of the box (think for instance of RStudio). Emacs will not work nearly as well for you out of the box. But its potential is unlimited and any feature you dream of seeing, you can just make it. You are not limited by what others decided to implement, nor how they chose to customize the tool. The look, the feel, the key bindings, the automation, etc. are all up to you. In many ways, this is absolute freedom. But you have to fight a bit to enjoy it :)/
